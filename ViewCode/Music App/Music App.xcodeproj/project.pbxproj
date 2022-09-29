@@ -17,6 +17,8 @@
 		2229201128E60DDC000E4664 /* NSTextAttachment + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229200C28E60DDB000E4664 /* NSTextAttachment + Extension.swift */; };
 		2229201228E60DDC000E4664 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229200E28E60DDC000E4664 /* CardViewModel.swift */; };
 		2229201528E612B2000E4664 /* HomeViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229201428E612B2000E4664 /* HomeViewControllerScreen.swift */; };
+		2229201928E61B9F000E4664 /* CardViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229201828E61B9F000E4664 /* CardViewTableViewCell.swift */; };
+		2229201C28E61CF0000E4664 /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229201B28E61CF0000E4664 /* CustomCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2229200C28E60DDB000E4664 /* NSTextAttachment + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment + Extension.swift"; sourceTree = "<group>"; };
 		2229200E28E60DDC000E4664 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		2229201428E612B2000E4664 /* HomeViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerScreen.swift; sourceTree = "<group>"; };
+		2229201828E61B9F000E4664 /* CardViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTableViewCell.swift; sourceTree = "<group>"; };
+		2229201B28E61CF0000E4664 /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +68,11 @@
 		22291FF428E60510000E4664 /* Music App */ = {
 			isa = PBXGroup;
 			children = (
-				2229201328E61240000E4664 /* Home */,
+				2229201A28E61CD2000E4664 /* CustomView */,
 				2229200928E60DDB000E4664 /* Extension */,
 				2229200D28E60DDC000E4664 /* Model */,
+				2229201328E61240000E4664 /* Home */,
+				2229201728E61B6B000E4664 /* Cell */,
 				22291FF528E60510000E4664 /* AppDelegate.swift */,
 				22291FF728E60510000E4664 /* SceneDelegate.swift */,
 				22291FFE28E60516000E4664 /* Assets.xcassets */,
@@ -109,6 +115,22 @@
 				2229201428E612B2000E4664 /* HomeViewControllerScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		2229201728E61B6B000E4664 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2229201828E61B9F000E4664 /* CardViewTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2229201A28E61CD2000E4664 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				2229201B28E61CF0000E4664 /* CustomCardView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +203,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2229201928E61B9F000E4664 /* CardViewTableViewCell.swift in Sources */,
 				22291FFA28E60510000E4664 /* HomeViewController.swift in Sources */,
 				2229201528E612B2000E4664 /* HomeViewControllerScreen.swift in Sources */,
 				22291FF628E60510000E4664 /* AppDelegate.swift in Sources */,
 				2229201128E60DDC000E4664 /* NSTextAttachment + Extension.swift in Sources */,
 				22291FF828E60510000E4664 /* SceneDelegate.swift in Sources */,
 				2229201028E60DDC000E4664 /* UIView + Extension.swift in Sources */,
+				2229201C28E61CF0000E4664 /* CustomCardView.swift in Sources */,
 				2229200F28E60DDC000E4664 /* NSAttributedString + Extension.swift in Sources */,
 				2229201228E60DDC000E4664 /* CardViewModel.swift in Sources */,
 			);
