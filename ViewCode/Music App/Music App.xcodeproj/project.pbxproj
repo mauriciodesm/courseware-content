@@ -12,6 +12,10 @@
 		22291FFA28E60510000E4664 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22291FF928E60510000E4664 /* HomeViewController.swift */; };
 		22291FFF28E60516000E4664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22291FFE28E60516000E4664 /* Assets.xcassets */; };
 		2229200228E60516000E4664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2229200028E60516000E4664 /* LaunchScreen.storyboard */; };
+		2229200F28E60DDC000E4664 /* NSAttributedString + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229200A28E60DDB000E4664 /* NSAttributedString + Extension.swift */; };
+		2229201028E60DDC000E4664 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229200B28E60DDB000E4664 /* UIView + Extension.swift */; };
+		2229201128E60DDC000E4664 /* NSTextAttachment + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229200C28E60DDB000E4664 /* NSTextAttachment + Extension.swift */; };
+		2229201228E60DDC000E4664 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229200E28E60DDC000E4664 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		22291FFE28E60516000E4664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2229200128E60516000E4664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2229200328E60516000E4664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2229200A28E60DDB000E4664 /* NSAttributedString + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString + Extension.swift"; sourceTree = "<group>"; };
+		2229200B28E60DDB000E4664 /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		2229200C28E60DDB000E4664 /* NSTextAttachment + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment + Extension.swift"; sourceTree = "<group>"; };
+		2229200E28E60DDC000E4664 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 		22291FF428E60510000E4664 /* Music App */ = {
 			isa = PBXGroup;
 			children = (
+				2229200928E60DDB000E4664 /* Extension */,
+				2229200D28E60DDC000E4664 /* Model */,
 				22291FF528E60510000E4664 /* AppDelegate.swift */,
 				22291FF728E60510000E4664 /* SceneDelegate.swift */,
 				22291FF928E60510000E4664 /* HomeViewController.swift */,
@@ -62,6 +72,24 @@
 				2229200328E60516000E4664 /* Info.plist */,
 			);
 			path = "Music App";
+			sourceTree = "<group>";
+		};
+		2229200928E60DDB000E4664 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2229200A28E60DDB000E4664 /* NSAttributedString + Extension.swift */,
+				2229200B28E60DDB000E4664 /* UIView + Extension.swift */,
+				2229200C28E60DDB000E4664 /* NSTextAttachment + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2229200D28E60DDC000E4664 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2229200E28E60DDC000E4664 /* CardViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +164,11 @@
 			files = (
 				22291FFA28E60510000E4664 /* HomeViewController.swift in Sources */,
 				22291FF628E60510000E4664 /* AppDelegate.swift in Sources */,
+				2229201128E60DDC000E4664 /* NSTextAttachment + Extension.swift in Sources */,
 				22291FF828E60510000E4664 /* SceneDelegate.swift in Sources */,
+				2229201028E60DDC000E4664 /* UIView + Extension.swift in Sources */,
+				2229200F28E60DDC000E4664 /* NSAttributedString + Extension.swift in Sources */,
+				2229201228E60DDC000E4664 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
