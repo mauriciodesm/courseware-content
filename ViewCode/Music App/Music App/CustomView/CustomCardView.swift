@@ -110,13 +110,11 @@ class CustomCardView: UIView {
         return label
     }()
     
-    init(viewMode:ViewMode, cardData:CardViewModel){
+    init(){
         let frame = CGRect.zero
-        self.viewMode = viewMode
-        self.dataModel = cardData
-        
         super.init(frame: frame)
         self.addSubViews()
+        self.setUpConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -131,7 +129,6 @@ class CustomCardView: UIView {
         self.cardContainerView.addSubview(self.profileBorderView)
         self.cardContainerView.addSubview(self.cardProfilePicture)
         self.cardContainerView.addSubview(self.addProfileImageButton)
-        
         
         self.cardContainerView.addSubview(self.cardCategoryTitleLabel)
         self.cardContainerView.addSubview(self.cardCategoryDateLabel)
@@ -184,7 +181,23 @@ class CustomCardView: UIView {
             self.cardTitle.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 20),
             self.cardTitle.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant: -20),
 
+            self.likeAndTimeLabel.topAnchor.constraint(equalTo: self.cardTitle.bottomAnchor, constant: 10),
+            self.likeAndTimeLabel.centerXAnchor.constraint(equalTo: self.cardContainerView.centerXAnchor),
+            
+            self.descriptionTitleLabel.topAnchor.constraint(equalTo: self.likeAndTimeLabel.bottomAnchor, constant: 30),
+            self.descriptionTitleLabel.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 40),
+            self.descriptionTitleLabel.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant: -40),
         ])
+    }
+    
+    public func setupView(data: CardViewModel){
+        self.cardCategoryTitleLabel.text = data.categoryName
+        self.cardCategoryDateLabel.text = data.categoryDate
+        self.cardTitle.text = data.cardTitle
+        self.likeAndTimeLabel.attributedText = NSAttributedString.featureText(data.likeCount ?? "", data.duration ?? "")
+        self.descriptionTitleLabel.text = data.cardDescription
+        self.cardImage.image = UIImage(named: data.cardImage ?? "")
+        self.cardProfilePicture.image = UIImage(named: data.categoryImage ?? "")
     }
     
     private func updateLayout(for mode:ViewMode){

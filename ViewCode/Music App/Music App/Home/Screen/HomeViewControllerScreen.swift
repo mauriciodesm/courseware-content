@@ -7,6 +7,7 @@ class HomeViewControllerScreen: UIView {
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         tableView.showsVerticalScrollIndicator = false
+        tableView.register(CardViewTableViewCell.self, forCellReuseIdentifier: CardViewTableViewCell.identifier)
         return tableView
     }()
     
