@@ -22,6 +22,8 @@
 		2229201C28E61CF0000E4664 /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229201B28E61CF0000E4664 /* CustomCardView.swift */; };
 		229AEE7A28EF5E6500C7CFB7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AEE7928EF5E6500C7CFB7 /* DetailViewController.swift */; };
 		229AEE7C28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AEE7B28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift */; };
+		229AEE7F28EF6DFA00C7CFB7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AEE7E28EF6DFA00C7CFB7 /* DetailTableViewCell.swift */; };
+		229AEE8228EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AEE8128EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		2229201B28E61CF0000E4664 /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
 		229AEE7928EF5E6500C7CFB7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		229AEE7B28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerScreen.swift; sourceTree = "<group>"; };
+		229AEE7E28EF6DFA00C7CFB7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		229AEE8128EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,10 +148,28 @@
 		229AEE7828EF5E4300C7CFB7 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				229AEE7D28EF6DE000C7CFB7 /* Cell */,
 				229AEE7928EF5E6500C7CFB7 /* DetailViewController.swift */,
 				229AEE7B28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		229AEE7D28EF6DE000C7CFB7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				229AEE8028EF6E6800C7CFB7 /* Screen */,
+				229AEE7E28EF6DFA00C7CFB7 /* DetailTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		229AEE8028EF6E6800C7CFB7 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				229AEE8128EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +244,8 @@
 			files = (
 				229AEE7C28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift in Sources */,
 				2229201928E61B9F000E4664 /* CardViewTableViewCell.swift in Sources */,
+				229AEE8228EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift in Sources */,
+				229AEE7F28EF6DFA00C7CFB7 /* DetailTableViewCell.swift in Sources */,
 				22291FFA28E60510000E4664 /* HomeViewController.swift in Sources */,
 				2229201528E612B2000E4664 /* HomeViewControllerScreen.swift in Sources */,
 				229AEE7A28EF5E6500C7CFB7 /* DetailViewController.swift in Sources */,

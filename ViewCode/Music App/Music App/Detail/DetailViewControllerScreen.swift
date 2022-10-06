@@ -37,6 +37,7 @@ class DetailViewControllerScreen: UIView {
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.isScrollEnabled = false
+        tableView.register(DetailTableViewCell.self, forCellReuseIdentifier: DetailTableViewCell.identifier)
         tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         return tableView
     }()
