@@ -7,7 +7,6 @@ enum ViewMode{
 
 class CustomCardView: UIView {
 
-    var viewMode:ViewMode?
     var containerLeadingConstraints: NSLayoutConstraint?
     var containerTrailingConstraints: NSLayoutConstraint?
     var containerTopConstraints: NSLayoutConstraint?
@@ -110,11 +109,18 @@ class CustomCardView: UIView {
         return label
     }()
     
-    init(){
+    lazy var actionView: CardActionView = {
+        let view = CardActionView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    init(mode:ViewMode){
         let frame = CGRect.zero
         super.init(frame: frame)
         self.addSubViews()
         self.setUpConstraints()
+        self.updateLayout(for: mode)
     }
     
     required init?(coder: NSCoder) {
@@ -135,9 +141,8 @@ class CustomCardView: UIView {
         self.cardContainerView.addSubview(self.cardTitle)
         self.cardContainerView.addSubview(self.likeAndTimeLabel)
         self.cardContainerView.addSubview(self.descriptionTitleLabel)
-        
-        self.updateLayout(for: self.viewMode ?? .card)
-    }
+        self.cardContainerView.addSubview(self.actionView)
+        }
 
     private func setUpConstraints(){
         self.containerLeadingConstraints = cardContainerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30)
@@ -187,6 +192,13 @@ class CustomCardView: UIView {
             self.descriptionTitleLabel.topAnchor.constraint(equalTo: self.likeAndTimeLabel.bottomAnchor, constant: 30),
             self.descriptionTitleLabel.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 40),
             self.descriptionTitleLabel.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant: -40),
+            
+            self.actionView.bottomAnchor.constraint(equalTo: self.cardContainerView.bottomAnchor, constant: -20),
+            self.actionView.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 20),
+            self.actionView.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant: -20),
+            self.actionView.heightAnchor.constraint(equalToConstant: 80),
+            
+            
         ])
     }
     
@@ -215,6 +227,7 @@ class CustomCardView: UIView {
             self.containerBottomConstraints?.constant = -30
             self.descriptionTitleLabel.isHidden = true
         }
+        self.actionView.updateLayout(for: mode)
         
     }
         
