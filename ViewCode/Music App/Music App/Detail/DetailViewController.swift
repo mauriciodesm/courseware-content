@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
         } else{
             self.screen?.navBarTopAnchor?.constant = -((topPadding ?? 0.0) + 80)
         }
-        UIView.animate(withDuration: 0.0, delay: 0, options: .curveEaseInOut) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
             return
         }
         
