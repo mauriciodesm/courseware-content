@@ -222,9 +222,9 @@ class CustomCardView: UIView {
         }
         else {
             self.containerLeadingConstraints?.constant = 30
-            self.containerTrailingConstraints?.constant = 15
-            self.containerTopConstraints?.constant = -15
-            self.containerBottomConstraints?.constant = -30
+            self.containerTrailingConstraints?.constant = -30
+            self.containerTopConstraints?.constant = 15
+            self.containerBottomConstraints?.constant = -15
             self.descriptionTitleLabel.isHidden = true
         }
         self.actionView.updateLayout(for: mode)

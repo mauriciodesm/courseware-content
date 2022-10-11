@@ -53,6 +53,15 @@ class DetailViewControllerScreen: UIView {
         return btn
     }()
     
+    lazy var navBar: CustomNavBar = {
+        let view = CustomNavBar()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black
+        view.setUpView(data: self.cardModel ?? CardViewModel())
+        return view
+        
+    }()
+    
     @objc func closeButtonPressed(){
         self.delegate?.tappedCloseButton()
     }
@@ -74,7 +83,9 @@ class DetailViewControllerScreen: UIView {
         self.addSubview(self.scrollView)
         self.scrollView.addSubview(self.cardView)
         self.scrollView.addSubview(self.tableView)
-        self.scrollView.addSubview(self.closeBtn)
+        self.addSubview(self.navBar)
+        self.addSubview(self.closeBtn)
+        
     }
     
     private func setUpConstraints(){
@@ -99,8 +110,14 @@ class DetailViewControllerScreen: UIView {
             self.closeBtn.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.closeBtn.widthAnchor.constraint(equalToConstant: 30),
             self.closeBtn.heightAnchor.constraint(equalToConstant: 30),
-            self.closeBtn.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10)
+            self.closeBtn.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
+            
+            self.navBar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.navBar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.navBar.heightAnchor.constraint(equalToConstant: ( (topPadding ?? 0.0) + 80) ),
         ])
+        self.navBarTopAnchor = self.navBar.topAnchor.constraint(equalTo: self.topAnchor, constant: -( (topPadding ?? 0.0) + 60))
+        self.navBarTopAnchor?.isActive = true
     }
     
     public func configAllDelegates(tableViewDelegate: UITableViewDelegate,

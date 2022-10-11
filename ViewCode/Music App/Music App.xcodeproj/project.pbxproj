@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22165C9028EBBF72008CBA1A /* CardActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22165C8F28EBBF72008CBA1A /* CardActionView.swift */; };
+		221970DB28F5B7FD00E88839 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221970DA28F5B7FD00E88839 /* CustomNavBar.swift */; };
 		22291FF628E60510000E4664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22291FF528E60510000E4664 /* AppDelegate.swift */; };
 		22291FF828E60510000E4664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22291FF728E60510000E4664 /* SceneDelegate.swift */; };
 		22291FFA28E60510000E4664 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22291FF928E60510000E4664 /* HomeViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		22165C8F28EBBF72008CBA1A /* CardActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActionView.swift; sourceTree = "<group>"; };
+		221970DA28F5B7FD00E88839 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		22291FF228E60510000E4664 /* Music App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22291FF528E60510000E4664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22291FF728E60510000E4664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 				2229200928E60DDB000E4664 /* Extension */,
 				2229200D28E60DDC000E4664 /* Model */,
 				2229201328E61240000E4664 /* Home */,
-				2229201728E61B6B000E4664 /* Cell */,
 				22291FF528E60510000E4664 /* AppDelegate.swift */,
 				22291FF728E60510000E4664 /* SceneDelegate.swift */,
 				22291FFE28E60516000E4664 /* Assets.xcassets */,
@@ -139,8 +140,10 @@
 		2229201A28E61CD2000E4664 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				2229201728E61B6B000E4664 /* Cell */,
 				2229201B28E61CF0000E4664 /* CustomCardView.swift */,
 				22165C8F28EBBF72008CBA1A /* CardActionView.swift */,
+				221970DA28F5B7FD00E88839 /* CustomNavBar.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				229AEE7C28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift in Sources */,
 				2229201928E61B9F000E4664 /* CardViewTableViewCell.swift in Sources */,
+				221970DB28F5B7FD00E88839 /* CustomNavBar.swift in Sources */,
 				229AEE8228EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift in Sources */,
 				229AEE7F28EF6DFA00C7CFB7 /* DetailTableViewCell.swift in Sources */,
 				22291FFA28E60510000E4664 /* HomeViewController.swift in Sources */,

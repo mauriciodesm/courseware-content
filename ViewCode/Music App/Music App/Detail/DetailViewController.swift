@@ -20,6 +20,26 @@ class DetailViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let window = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .compactMap({$0 as? UIWindowScene}).first?.windows.filter({$0.isKeyWindow}).first
+        let topPadding = window?.safeAreaInsets.top
+        print(scrollView.contentOffset.y)
+        
+        if scrollView.contentOffset.y >= 300 {
+            self.screen?.navBarTopAnchor?.constant = 0
+        } else{
+            self.screen?.navBarTopAnchor?.constant = -((topPadding ?? 0.0) + 80)
+        }
+        UIView.animate(withDuration: 0.0, delay: 0, options: .curveEaseInOut) {
+            return
+        }
+        
+        self.view.layoutIfNeeded()
+                                    
+    }
 
 }
 
