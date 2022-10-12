@@ -8,7 +8,7 @@ Apenas um pod foi usado, o MarqueeLabel. A ideia de não utilizar mais bibliotec
 
 A priori, os próximos passos são: 
 1. Programar os botões restantes (like, more, remove playlist).
-2. Adicionar opção de criar playlist (com as músicas provenientes de um arquivo JSON a ser editado por mim).
+2. Adicionar opção de criar playlist (com as músicas e demais informações provenientes de um arquivo JSON a ser editado por mim).
 
 ##
 
