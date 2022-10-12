@@ -8,6 +8,8 @@ class DetailViewControllerScreen: UIView {
 
     var cardModel: CardViewModel?
     var navBarTopAnchor: NSLayoutConstraint?
+    var playerViewBottomAnchor: NSLayoutConstraint?
+
     
     private weak var delegate: DetailViewControllerScreenDelegate?
     
@@ -62,6 +64,12 @@ class DetailViewControllerScreen: UIView {
         
     }()
     
+    lazy var playerView: CustomPlayerView = {
+        let view = CustomPlayerView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     @objc func closeButtonPressed(){
         self.delegate?.tappedCloseButton()
     }
@@ -85,6 +93,7 @@ class DetailViewControllerScreen: UIView {
         self.scrollView.addSubview(self.tableView)
         self.addSubview(self.navBar)
         self.addSubview(self.closeBtn)
+        self.addSubview(self.playerView)
         
     }
     
@@ -115,9 +124,16 @@ class DetailViewControllerScreen: UIView {
             self.navBar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.navBar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.navBar.heightAnchor.constraint(equalToConstant: ( (topPadding ?? 0.0) + 80) ),
+            
+            self.playerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.playerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.playerView.heightAnchor.constraint(equalToConstant: 120)
         ])
         self.navBarTopAnchor = self.navBar.topAnchor.constraint(equalTo: self.topAnchor, constant: -( (topPadding ?? 0.0) + 60))
         self.navBarTopAnchor?.isActive = true
+        
+        self.playerViewBottomAnchor = self.playerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 120)
+        self.playerViewBottomAnchor?.isActive = true
     }
     
     public func configAllDelegates(tableViewDelegate: UITableViewDelegate,

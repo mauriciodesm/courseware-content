@@ -25,6 +25,7 @@
 		229AEE7C28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AEE7B28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift */; };
 		229AEE7F28EF6DFA00C7CFB7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AEE7E28EF6DFA00C7CFB7 /* DetailTableViewCell.swift */; };
 		229AEE8228EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AEE8128EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift */; };
+		22B7688728F60D5700BBAD36 /* CustomPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B7688628F60D5700BBAD36 /* CustomPlayerView.swift */; };
 		FD0EAD3E605137EF57A85B7A /* Pods_Music_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B0C78B440260F486F5F37B /* Pods_Music_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		229AEE7B28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerScreen.swift; sourceTree = "<group>"; };
 		229AEE7E28EF6DFA00C7CFB7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		229AEE8128EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCellScreen.swift; sourceTree = "<group>"; };
+		22B7688628F60D5700BBAD36 /* CustomPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayerView.swift; sourceTree = "<group>"; };
 		85B0C78B440260F486F5F37B /* Pods_Music_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C101C33EB4C4C199671409CB /* Pods-Music App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music App.release.xcconfig"; path = "Target Support Files/Pods-Music App/Pods-Music App.release.xcconfig"; sourceTree = "<group>"; };
 		F48BA22D6501A552714BDFFC /* Pods-Music App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music App.debug.xcconfig"; path = "Target Support Files/Pods-Music App/Pods-Music App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,7 +74,6 @@
 				F48BA22D6501A552714BDFFC /* Pods-Music App.debug.xcconfig */,
 				C101C33EB4C4C199671409CB /* Pods-Music App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,9 +98,9 @@
 		22291FF428E60510000E4664 /* Music App */ = {
 			isa = PBXGroup;
 			children = (
-				229AEE7828EF5E4300C7CFB7 /* Detail */,
-				2229201A28E61CD2000E4664 /* CustomView */,
 				2229200928E60DDB000E4664 /* Extension */,
+				229AEE7828EF5E4300C7CFB7 /* DetailView */,
+				2229201A28E61CD2000E4664 /* CustomView */,
 				2229200D28E60DDC000E4664 /* Model */,
 				2229201328E61240000E4664 /* Home */,
 				22291FF528E60510000E4664 /* AppDelegate.swift */,
@@ -161,18 +162,19 @@
 				2229201B28E61CF0000E4664 /* CustomCardView.swift */,
 				22165C8F28EBBF72008CBA1A /* CardActionView.swift */,
 				221970DA28F5B7FD00E88839 /* CustomNavBar.swift */,
+				22B7688628F60D5700BBAD36 /* CustomPlayerView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
 		};
-		229AEE7828EF5E4300C7CFB7 /* Detail */ = {
+		229AEE7828EF5E4300C7CFB7 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
 				229AEE7D28EF6DE000C7CFB7 /* Cell */,
 				229AEE7928EF5E6500C7CFB7 /* DetailViewController.swift */,
 				229AEE7B28EF5E8B00C7CFB7 /* DetailViewControllerScreen.swift */,
 			);
-			path = Detail;
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		229AEE7D28EF6DE000C7CFB7 /* Cell */ = {
@@ -320,6 +322,7 @@
 				229AEE8228EF6E8900C7CFB7 /* DetailTableViewCellScreen.swift in Sources */,
 				229AEE7F28EF6DFA00C7CFB7 /* DetailTableViewCell.swift in Sources */,
 				22291FFA28E60510000E4664 /* HomeViewController.swift in Sources */,
+				22B7688728F60D5700BBAD36 /* CustomPlayerView.swift in Sources */,
 				2229201528E612B2000E4664 /* HomeViewControllerScreen.swift in Sources */,
 				229AEE7A28EF5E6500C7CFB7 /* DetailViewController.swift in Sources */,
 				22291FF628E60510000E4664 /* AppDelegate.swift in Sources */,

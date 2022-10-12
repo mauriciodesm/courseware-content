@@ -33,12 +33,15 @@ class DetailViewController: UIViewController {
         } else{
             self.screen?.navBarTopAnchor?.constant = -((topPadding ?? 0.0) + 80)
         }
+        self.animationWithView()
+                                    
+    }
+    private func animationWithView(){
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
             return
         }
         
         self.view.layoutIfNeeded()
-                                    
     }
 
 }
@@ -65,5 +68,11 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.screen?.playerView.setUpPlayerView(data: self.cardModel?.cardList?[indexPath.row] ?? CardListModel() )
+        self.screen?.playerViewBottomAnchor?.constant = 0
+        self.animationWithView()
     }
 }
