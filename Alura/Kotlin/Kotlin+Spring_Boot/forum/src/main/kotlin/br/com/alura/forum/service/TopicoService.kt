@@ -1,55 +1,37 @@
 package br.com.alura.forum.service
 
-import br.com.alura.forum.model.Curso
+import br.com.alura.forum.DTO.NovoTopicoForm
+import br.com.alura.forum.DTO.TopicoView
+import br.com.alura.forum.mapper.TopicoFormMapper
+import br.com.alura.forum.mapper.TopicoViewMapper
 import br.com.alura.forum.model.Topico
-import br.com.alura.forum.model.Usuario
 import org.springframework.stereotype.Service
-import java.util.*
+import java.util.stream.Collectors
+import kotlin.collections.ArrayList
 
 @Service
-class TopicoService(private var topicos: List<Topico>) {
+class TopicoService(
+    private var topicos: List<Topico> = ArrayList(),
+    private val topicoViewMapper: TopicoViewMapper,
+    private val topicoFormMapper: TopicoFormMapper
+    ) {
 
-    init {
-        val topico = Topico(
-            id = 1,
-            titulo = "Duvida Kotlin",
-            mensagem = "variaveis no kotlin",
-            curso = Curso(
-                id = 1,
-                nome = "Kotlin",
-                categoria = "Programação",
-            ),
-            autor = Usuario(
-                id = 1,
-                usuario = "Ana da Silva",
-                email = "anadasilva@email.com"
-            )
-        )
-
-        val topico2 = Topico(
-            id = 2,
-            titulo = "Duvida Kotlin 2",
-            mensagem = "variaveis no kotlin 2",
-            curso = Curso(
-                id = 2,
-                nome = "Kotlin",
-                categoria = "Programação",
-            ),
-            autor = Usuario(
-                id = 2,
-                usuario = "Ana da Silva",
-                email = "anadasilva@email.com"
-            )
-        )
-        topicos =  Arrays.asList(topico, topico2)
-    }
-    fun listar(): List<Topico>{
-        return topicos
+    fun listar(): List<TopicoView>{
+        return topicos.stream().map {
+                t -> topicoViewMapper.map(t)
+        }.collect(Collectors.toList())
     }
 
-    fun buscarPorId(id: Long): Topico {
-        return topicos.stream().filter({
-            t -> t.id == id
-        }).findFirst().get()
+    fun buscarPorId(id: Long): TopicoView {
+        val topico =  topicos.stream().filter { t ->
+            t.id == id
+        }.findFirst().get()
+        return topicoViewMapper.map(topico)
+    }
+
+    fun cadastrar(form: NovoTopicoForm) {
+        val topico = topicoFormMapper.map(form)
+        topico.id = topicos.size.toLong() + 1
+        topicos = topicos.plus(topico)
     }
 }
