@@ -2,7 +2,7 @@ create table topico(
     id bigint not null auto_increment,
     titulo varchar(50),
     mensagem varchar(400) ,
-    dataCriacao datetime not null,
+    data_criacao datetime not null,
     curso_id bigint not null,
     autor_id bigint not null,
     status varchar(20) not null,
