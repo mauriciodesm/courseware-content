@@ -2,23 +2,14 @@ package br.com.alura.forum.service
 
 import br.com.alura.forum.model.Curso
 import br.com.alura.forum.model.Usuario
+import br.com.alura.forum.repository.UsuarioRepository
+import org.springframework.stereotype.Repository
 import org.springframework.stereotype.Service
 import java.util.Arrays
 
 @Service
-class UsuarioService (var usuarios:List<Usuario>){
-    init {
-        val usuario = Usuario(
-            id = 1,
-            usuario = "Ana da Silva",
-            email = "ana@emailana.com"
-        )
-        usuarios = Arrays.asList(usuario)
-    }
-
+class UsuarioService (private val repository: UsuarioRepository){
     fun buscarPorId(id: Long): Usuario {
-        return usuarios.stream().filter({
-                c -> c.id == id
-        }).findFirst().get()
+        return repository.getReferenceById(id)
     }
 }
